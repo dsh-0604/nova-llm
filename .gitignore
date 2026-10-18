@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# PyTorch
+*.pt
+*.pth
+*.bin
+*.safetensors
+checkpoints/
+outputs/
+
+# 数据
+*.jsonl
+*.jsonl.zst
+data/
+datasets/
+
+# 日志
+logs/
+*.log
+wandb/
+runs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 环境
+.env
+.env.local
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 构建
+*.zip
+*.tar.gz
