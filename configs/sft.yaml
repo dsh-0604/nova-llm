@@ -1,0 +1,29 @@
+# SFT 监督微调配置
+model:
+  pretrained_path: checkpoints/nova-1b
+  hidden_size: 2048
+  num_hidden_layers: 24
+  num_attention_heads: 32
+  num_key_value_heads: 8
+  intermediate_size: 5632
+  vocab_size: 32000
+
+training:
+  batch_size: 16
+  gradient_accumulation_steps: 2
+  learning_rate: 2.0e-5
+  min_lr: 2.0e-6
+  warmup_steps: 100
+  max_steps: 5000
+  weight_decay: 0.0
+  mixed_precision: bf16
+  grad_clip: 1.0
+
+data:
+  train_file: data/sft_train.jsonl
+  val_file: data/sft_val.jsonl
+  max_seq_len: 4096
+
+checkpoint:
+  output_dir: checkpoints/nova-1b-sft
+  save_steps: 500
